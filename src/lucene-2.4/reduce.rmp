@@ -12,8 +12,8 @@
     <parameter key="process_duration_for_mail" value="30"/>
     <parameter key="encoding" value="SYSTEM"/>
     <process expanded="true">
-      <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Retrieve jm1" width="90" x="45" y="187">
-        <parameter key="repository_entry" value="//uas-kelompok1/data/jm1"/>
+      <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Retrieve lucene-2.4-bi" width="90" x="112" y="85">
+        <parameter key="repository_entry" value="../../data/lucene-2.4-bi"/>
       </operator>
       <operator activated="true" class="normalize" compatibility="9.6.000" expanded="true" height="103" name="Normalize" width="90" x="112" y="340">
         <parameter key="return_preprocessing_model" value="false"/>
@@ -95,7 +95,7 @@
           <portSpacing port="sink_performance" spacing="0"/>
         </process>
       </operator>
-      <connect from_op="Retrieve jm1" from_port="output" to_op="Normalize" to_port="example set input"/>
+      <connect from_op="Retrieve lucene-2.4-bi" from_port="output" to_op="Normalize" to_port="example set input"/>
       <connect from_op="Normalize" from_port="example set output" to_op="Multiply" to_port="input"/>
       <connect from_op="Multiply" from_port="output 1" to_op="Optimize Selection" to_port="example set in"/>
       <connect from_op="Multiply" from_port="output 2" to_op="MRMR-FS" to_port="example set"/>
